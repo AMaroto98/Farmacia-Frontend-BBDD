@@ -29,7 +29,7 @@ CREATE TABLE xip (
     id_medicine INT(10),
     id_patient VARCHAR(50),
     date DATE,
-    FOREIGN KEY (doctor_mail) REFERENCES doctor(mail),
-    FOREIGN KEY (id_medicine) REFERENCES medicine(id),
-    FOREIGN KEY (id_patient) REFERENCES patient(mail)
+    FOREIGN KEY (doctor_mail) REFERENCES doctor(mail) ON DELETE CASCADE,
+    FOREIGN KEY (id_medicine) REFERENCES medicine(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_patient) REFERENCES patient(mail) ON DELETE CASCADE
 );
