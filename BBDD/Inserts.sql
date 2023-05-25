@@ -1,6 +1,7 @@
 USE farmacia;
 
-INSERT INTO doctor (mail, pass, name) VALUES ('antonio@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'Antonio'), 
+INSERT INTO doctor (mail, pass, name) VALUES 
+('antonio@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'Antonio'), 
 ('maria@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'Maria');
 
 INSERT INTO medicine (name, tmax, tmin) VALUES ('Paracetamol', 10.5, 2.3), ('Imurel', 8.7, 1.5), ('Enantyum', 15.2, 3.1), ('Enandol', 20.6, 8.4), ('Amoxicilina', 18.1, 2.3), ('Prednisona', 30.6, 5.1), ('Omeprazol', 10.4, 3.3), ('Nolotil', 35.1, 1.5);
