@@ -3,13 +3,23 @@ function enviar() {
     var http = new XMLHttpRequest();
 
     let mail = document.getElementById("mail").value;
-    let pass = document.getElementById("pass").value;
+    let contraseña = document.getElementById("pass").value;
 
-    // True indica que es asincrono
-    http.open("GET", "http://localhost:3000/Farmacia/Login?mail="+mail+"&pass="+pass, true);
-    http.send();
+    cifrarContraseña(contraseña)
+        .then(hash => {
+        let pass = hash;
+        // Aquí puedes hacer lo que desees con la variable `hash`, como enviarla a través de HTTP
+        console.log('Contraseña cifrada:', pass);
 
-    http.onreadystatechange = function(){
+        // True indica que es asincrónico
+        http.open("GET", "http://localhost:3000/Farmacia/Login?mail=" + mail + "&pass=" + pass, true);
+        http.send();
+        })
+        .catch(error => {
+        console.error('Error al cifrar la contraseña:', error);
+        });
+
+    http.onreadystatechange = function () {
 
         if (http.readyState == 4 && http.status == 200) {
 
@@ -30,8 +40,6 @@ function enviar() {
 
                 document.getElementById("resultat").innerHTML = "Login incorrecto";
             }
-
-
         }
     }
 }
@@ -54,4 +62,16 @@ function irGestion() {
 function resetearCampos() {
     document.getElementById("mail").value = "";
     document.getElementById("pass").value = "";
+}
+
+function cifrarContraseña(contraseña) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(contraseña);
+  
+    return window.crypto.subtle.digest('SHA-256', data)
+      .then(hashBuffer => {
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+        return hashHex;
+      });
 }
