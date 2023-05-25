@@ -66,7 +66,7 @@ function enviar() {
 
 
     http.open("POST", "http://localhost:3000/Farmacia/Release", true);
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); //Header
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     http.send("mail="+mail+"&session="+session+"&idXip="+idXip+"&mailPaciente="+mailPaciente+"&idMedicamento="+idMedicamento+"&fecha="+fecha);
 
 
