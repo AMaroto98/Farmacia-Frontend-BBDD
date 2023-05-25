@@ -1,0 +1,86 @@
+/* Estilo para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.contenido {
+    flex-grow: 1;
+}
+  
+  /* Estilo para el encabezado */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* border: 2px solid black; */
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    /* border: 2px solid black; */
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones */
+nav button {
+    margin-left: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cSesion {
+    background-color: #f44336;
+}
+  
+/* Estilo para el contenedor de la tabla */
+#tabla {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+table {
+    width: 97%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0;
+    /* border: 2px solid black; */
+
+}
+  
+footer p {
+    margin: 0;
+}
+  
+  

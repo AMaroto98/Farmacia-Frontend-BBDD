@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Alta.css">
+    <script src="../JS/Alta.js"></script>    
+    <title>Alta</title>
+</head>
+<body onload="getPatients(); getMedicines()" >
+
+    <div class="container">
+
+        <h1>Alta</h1>
+
+        <div id="form">   
+            <!-- ID del Chip -->
+            <label for="idChip">ID Chip: </label>    
+            <input type="text" name="idChip" id="idChip">
+            <br>
+
+            <!-- Lista de paciente -->
+            <label for="listaPacientes">Lista de pacientes:</label> 
+            <select name="listaPacientes" id="listaPacientes"> 
+                
+            </select>
+            <br>
+
+            <!-- Lista de medicamentos -->
+            <label for="listaMedicamentos">Lista de medicamentos:</label> 
+            <select name="listaMedicamentos" id="listaMedicamentos">
+
+            </select>
+            <br>
+
+            <!-- Fecha límite para tomar el medicamento -->
+            <label for="fechaLimite">Fecha límite: </label>   
+            <input type="date" name="fechaLimite" id="fechaLimite">
+            <br>
+
+            <!-- Botón enviar y volver a gestión -->
+            <button type="submit" onclick="enviar()">Enviar</button>
+            <button type="button" onclick="irGestion()">Volver a Gestión</button>
+        </div>
+    </div>
+    
+</body>
+</html>
