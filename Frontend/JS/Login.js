@@ -8,7 +8,6 @@ function enviar() {
     cifrarContraseña(contraseña)
         .then(hash => {
         let pass = hash;
-        // Aquí puedes hacer lo que desees con la variable `hash`, como enviarla a través de HTTP
         console.log('Contraseña cifrada:', pass);
 
         // True indica que es asincrónico
